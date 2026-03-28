@@ -10,6 +10,40 @@ namespace Taller3DJP261
     {
         public void Execute()
         {
+            E1();
+        }
+
+        private void E1()
+        {
+            float b;
+            float h;
+
+            
+            b= GetPositiveNumber("Introduce la base");
+            h= GetPositiveNumber("Introduce la altura");
+            Console.WriteLine($"El perímetro es {2 * b + 2 * h} y el área es {b * h}");
+
+        }
+
+        private float GetPositiveNumber(string message)
+        {
+            float value = 0;
+
+            while (value <= 0)
+            {
+                Console.WriteLine(message);
+                value = float.Parse(Console.ReadLine());
+                if (value <= 0)
+                {
+                    Console.WriteLine("El número debe ser positivo");
+                }
+            }
+            return value;
+        }
+
+        private void Example()
+        {
+
             string name;
             int age;
 
