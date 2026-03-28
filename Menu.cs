@@ -17,11 +17,12 @@ namespace Taller3DJP261
         {
             float b;
             float h;
-
+            Rectangle r;
             
             b= GetPositiveNumber("Introduce la base");
             h= GetPositiveNumber("Introduce la altura");
-            Console.WriteLine($"El perímetro es {2 * b + 2 * h} y el área es {b * h}");
+            r=new Rectangle(b, h);
+            Console.WriteLine($"El perímetro es {r.GetPerimeter()} y el área es {r.GetArea()}");
 
         }
 
@@ -46,14 +47,16 @@ namespace Taller3DJP261
 
             string name;
             int age;
+            Person p;
 
 
             Console.WriteLine("Introduce tu nombre:");
             name = Console.ReadLine();
-            Console.WriteLine($"Hola {name}");
             age = GetAge();
-            Console.WriteLine($"Tienes {age} años");
-            Console.WriteLine($"El próximo año tendrás {age + 1}");
+            p = new Person(name, age);
+            Console.WriteLine($"Hola {p.Name}");
+            Console.WriteLine($"Tienes {p.Age} años");
+            Console.WriteLine($"El próximo año tendrás {p.Age + 1}");
         }
 
         private int GetAge()
