@@ -10,7 +10,7 @@ namespace Taller3DJP261
     {
         static void Main(string[] args)
         {
-            Menu menu = new Menu();
+            ShapeMenu menu = new ShapeMenu();
             menu.Execute();
         }
     }
