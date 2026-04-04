@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Taller3DJP261
 {
-    internal class Program
+    internal class Square : Rectangle
     {
-        static void Main(string[] args)
+        public Square(string name, float side) : base(name, side, side)
         {
-            Menu menu = new Menu();
-            menu.Execute();
         }
     }
 }

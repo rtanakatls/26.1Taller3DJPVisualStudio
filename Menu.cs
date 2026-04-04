@@ -10,12 +10,24 @@ namespace Taller3DJP261
     {
         public void Execute()
         {
-            E1();
+            List<Shape> shapes = new List<Shape>();
+            shapes.Add(new Rectangle("R1", 20, 10));
+            shapes.Add(new Rectangle("R2", 5, 10));
+            shapes.Add(new Rectangle("R3", 20, 2));
+            shapes.Add(new Circle("C1", 5));
+            shapes.Add(new Square("S1", 20));
+            shapes.Add(new Square("S2", 10));
+            shapes.Add(new Circle("C2", 30));
+
+            foreach (Shape shape in shapes)
+            {
+                Console.WriteLine($"{shape.Name} - {shape.GetArea()}");
+            }
         }
 
         private void E1()
         {
-            float b;
+/*            float b;
             float h;
             Rectangle r;
             
@@ -23,7 +35,7 @@ namespace Taller3DJP261
             h= GetPositiveNumber("Introduce la altura");
             r=new Rectangle(b, h);
             Console.WriteLine($"El perímetro es {r.GetPerimeter()} y el área es {r.GetArea()}");
-
+*/
         }
 
 

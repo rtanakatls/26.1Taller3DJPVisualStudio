@@ -32,7 +32,7 @@ namespace Taller3DJP261
         }
 
         private void RectangleMenu()
-        {
+        {/*
             float b;
             float h;
             Rectangle r;
@@ -41,7 +41,7 @@ namespace Taller3DJP261
             h = GetPositiveNumber("Introduce la altura");
             r = new Rectangle(b, h);
             Console.WriteLine($"El perímetro es {r.GetPerimeter()} y el área es {r.GetArea()}");
-        }
+      */  }
 
         private float GetPositiveNumber(string message)
         {

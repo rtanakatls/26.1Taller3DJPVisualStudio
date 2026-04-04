@@ -6,26 +6,31 @@ using System.Threading.Tasks;
 
 namespace Taller3DJP261
 {
-    internal class Rectangle
+    internal class Rectangle : Shape
     {
-        private float b;
-        private float h;
+        protected float b;
+        protected float h;
 
-        public Rectangle(float b, float h)
+        public float B { get { return b; } }
+
+        public float H { get { return h; } }
+
+        public Rectangle(string name, float b, float h) : base(name)
         {
             this.b = b;
             this.h = h;
         }
 
-        public float GetArea()
+        public override float GetArea()
         {
             return b * h;
         }
 
-        public float GetPerimeter()
+        public override string GetData()
         {
-            return 2 * b + 2 * h;
+            return $"B: {b} - H: {h}";
         }
+
     }
 }
 
