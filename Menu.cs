@@ -8,9 +8,10 @@ namespace Taller3DJP261
 {
     internal class Menu
     {
+
+        private List<Shape> shapes = new List<Shape>();
         public void Execute()
         {
-            List<Shape> shapes = new List<Shape>();
             shapes.Add(new Rectangle("R1", 20, 10));
             shapes.Add(new Rectangle("R2", 5, 10));
             shapes.Add(new Rectangle("R3", 20, 2));
